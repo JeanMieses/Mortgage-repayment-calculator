@@ -1,29 +1,47 @@
+import classes from './Form.module.css';
 
+function Form() {
+    return <div className={classes.calculator}>
 
-function Form({ calculatorStyle }) {
-    return <div className={calculatorStyle}>
-
-        <div>
+        <div className={classes.title}>
             <h1>Mortgage Calculator</h1>
             <button>Clear All</button>
         </div>
 
         <form>
-            <label htmlFor="mortgateAmount">Mortgage Amount</label>
-            <div><input id="mortgateAmount" type="number" /></div>
+            <div className={classes.amount}>
 
-            <span>
-                <label htmlFor="term">Mortgage Term</label>
-                <input id="term" type="number" />
-            </span>
+                <label htmlFor="mortgateAmount">Mortgage Amount</label>
+                <br />
+                <div>
+                    <span>$</span>
+                    <input placeholder='50,000' id="mortgateAmount" type="number" />
+                </div>
+            </div>
 
-            <span>
-                <label htmlFor="rate">Interest Rate</label>
-                <input id="rate" type="number" />
-            </span>
+            <div className={classes.termAndRate}>
+                <div>
+                    <label htmlFor="term">Mortgage Term</label>
+                    <div>
+                        <input id="term" type="number" />
+                        <p>years</p></div>
+                </div>
 
-            <div>
-                <p>Mortgate Type </p>
+                <div>
+                    <label htmlFor="rate">Interest Rate</label>
+                    <div>
+                        <input id="rate" type="number" />
+                        <p>%</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+            <div className={classes.mortgateType}>
+                <h2>Mortgate Type </h2>
                 <br />
                 <div>
                     <label htmlFor="repayment"></label>
