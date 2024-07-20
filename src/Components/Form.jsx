@@ -1,11 +1,16 @@
 import { useState } from 'react';
 import classes from './Form.module.css';
-import calImg from './../../public/assets/images/icon-calculator.svg'
+import calImg from '/assets/images/icon-calculator.svg'
 
-function Form({ setMortgatePayment, mortgatePayment }) {
+function Form({ setMortgatePayment, mortgatePayment, calculateRepayment }) {
     const [mortgateAmount, setMortgateAmount] = useState()
     const [term, setTerm] = useState()
     const [interestRate, setInterestRate] = useState()
+
+    function calculateRepaymentHandler(e) {
+        e.preventDefault();
+        calculateRepayment();
+    }
 
     function mortgateAmountHandler(e) {
         setMortgatePayment((curState) => {
@@ -85,7 +90,7 @@ function Form({ setMortgatePayment, mortgatePayment }) {
                     <label htmlFor="interest"></label>
                     <input id="interest" name="mortgate-type" type="radio" value="interest" />Interest Only</div>
             </div>
-            <button className={classes.formBtn}> <img src={calImg} /> Calculate Repayments</button>
+            <button onClick={calculateRepaymentHandler} className={classes.formBtn}> <img src={calImg} /> Calculate Repayments</button>
         </form>
     </div>
 }

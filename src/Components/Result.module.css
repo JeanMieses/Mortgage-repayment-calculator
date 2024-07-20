@@ -1,0 +1,28 @@
+.result {
+    background-color: hsl(202, 55%, 16%);
+    color: White;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 1rem 1.5rem 4rem;
+    height: 100%;
+    width: 50%;
+  }
+  
+  .result img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .result h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  .result p {
+    color: hsl(203, 41%, 72%);
+    margin: 0.15rem;
+    font-size: 0.7rem;
+  }
