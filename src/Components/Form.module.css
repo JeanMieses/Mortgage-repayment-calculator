@@ -29,6 +29,24 @@
     padding: 0;
     font-size: 0.7rem;
   }
+
+
+  .formBtn {
+    background-color: hsl(61, 70%, 52%);
+    margin-left: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    border-radius: 2rem;
+    font-weight: bold;
+    width: 70%;
+  }
+  .formBtn  img {
+    margin: 0 0.5rem 0 0.1rem;
+  }
+
   /* ------------------------------------------------------------------ */
 
   .amount {

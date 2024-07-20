@@ -7,14 +7,13 @@ main {
   justify-content: center;
   box-shadow: 10px 5px 50px  hsl(200, 26%, 54%);
   border-radius: 1.5rem;
+  max-width: 810px;
 }
 
 .result {
   height: 500px;
   width: 50%;
 }
-
-
 
 
 /* ------------------------------------------------------------------------------ */
