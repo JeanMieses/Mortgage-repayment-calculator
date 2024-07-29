@@ -4,6 +4,7 @@ import Form from './Components/Form';
 import Result from './Components/Result';
 
 function App() {
+  const [showResult, setShowResult] = useState(false);
   const[repayment, setRepayment] = useState(0)
   const [mortgatePayment, setMortgatePayment] = useState({
     mortgateAmount: '',
@@ -15,6 +16,7 @@ function App() {
     const {mortgateAmount, terms, interestRate} = mortgatePayment
     let repayment =  mortgateAmount * (interestRate / 100 / 12) * (Math.pow(1 + (interestRate / 100 / 12), terms * 12)) / (Math.pow(1 + (interestRate / 100 / 12), terms * 12) - 1);
     setRepayment(repayment.toFixed(2))
+    setShowResult(true);
   }
 
   return (
@@ -24,7 +26,7 @@ function App() {
         calculatorStyle={classes.calculator} 
         mortgatePayment={mortgatePayment}
         setMortgatePayment={setMortgatePayment}/>
-      <Result repayment={repayment} />
+      <Result terms={mortgatePayment.terms} showResult={showResult} repayment={repayment} />
     </main>
   )
 }

@@ -1,12 +1,8 @@
-import { useState } from 'react';
 import classes from './Form.module.css';
 import calImg from '/assets/images/icon-calculator.svg'
 
 function Form({ setMortgatePayment, mortgatePayment, calculateRepayment }) {
-    const [mortgateAmount, setMortgateAmount] = useState()
-    const [term, setTerm] = useState()
-    const [interestRate, setInterestRate] = useState()
-
+ 
     function calculateRepaymentHandler(e) {
         e.preventDefault();
         calculateRepayment();
